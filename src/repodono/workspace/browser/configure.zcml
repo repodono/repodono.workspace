@@ -17,4 +17,11 @@
       directory="static"
       />
 
+  <browser:page
+      name="workspace_view"
+      for="repodono.workspace.interfaces.IWorkspace"
+      class="repodono.workspace.browser.view.WorkspaceView"
+      permission="zope2.View"
+      />
+
 </configure>
