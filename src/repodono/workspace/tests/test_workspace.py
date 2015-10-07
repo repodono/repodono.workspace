@@ -9,7 +9,7 @@ from plone import api
 from repodono.workspace.testing import REPODONO_WORKSPACE_INTEGRATION_TESTING  # noqa
 from repodono.workspace.interfaces import IWorkspace
 
-import unittest2 as unittest
+import unittest
 
 
 class WorkspaceIntegrationTest(unittest.TestCase):
