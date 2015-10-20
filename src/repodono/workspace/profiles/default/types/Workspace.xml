@@ -23,6 +23,7 @@
   <property name="klass">plone.dexterity.content.Item</property>
   <property name="behaviors">
     <element value="plone.app.content.interfaces.INameFromTitle"/>
+    <element value="repodono.storage.interfaces.IStorageEnabled"/>
   </property>
   <property name="schema">repodono.workspace.interfaces.IWorkspace</property>
   <property name="model_source"></property>
