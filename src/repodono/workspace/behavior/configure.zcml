@@ -1,0 +1,33 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="repodono.workspace">
+
+  <!--
+    This is just simply a marker for the workspace concept that this
+    package, as a way for dexterity types to provide features
+    introduced by IWorkspace.
+  -->
+
+  <plone:behavior
+      title="Workspace"
+      description="Marker interface for workspaces."
+      provides="..interfaces.IWorkspace"
+      />
+
+  <!--
+    The marker subscriber is not enabled by default (or needed at all
+    as plone.dexterity provides a custom __providedBy__ which "marks"
+    the created Item as one that provides IWorkspace, when queried in
+    the Plone site (when it is the site manager).  It is not actually
+    marked in ZODB.  If this marker interface is required for the new
+    item at the global manager, enable the following subscriber.
+
+  <subscriber
+      for="..interfaces.IWorkspace
+           zope.lifecycleevent.interfaces.IObjectCreatedEvent"
+      handler="plone.behavior.markers.applyMarkers"
+      />
+  -->
+
+</configure>
