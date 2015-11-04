@@ -1,0 +1,22 @@
+Workspace storage integration
+=============================
+
+Setup a test browser::
+
+    >>> portal = layer['portal']
+    >>> from plone.app.testing import TEST_USER_ID, TEST_USER_NAME, TEST_USER_PASSWORD, setRoles
+    >>> setRoles(portal, TEST_USER_ID, ['Manager'])
+    >>> import transaction; transaction.commit()
+    >>> from plone.testing.z2 import Browser
+    >>> browser = Browser(layer['app'])
+    >>> browser.addHeader('Authorization', 'Basic %s:%s' % (TEST_USER_NAME, TEST_USER_PASSWORD,))
+
+Try to add storage_enabled content::
+
+    >>> browser.open('http://nohost/plone/++add++Workspace')
+
+Check the backend options::
+
+    >>> backends = browser.getControl('Backend')
+    >>> backends.options
+    []

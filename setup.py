@@ -47,6 +47,7 @@ setup(
         'setuptools',
         'z3c.jbot',
         'plone.app.dexterity',
+        'repodono.storage',
     ],
     extras_require={
         'test': [
