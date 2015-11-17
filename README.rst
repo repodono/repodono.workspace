@@ -9,6 +9,11 @@ source code from external repositories.
 This is akin to a standalone implementation of what was provided by
 pmr2.app.workspace.
 
+.. image:: https://travis-ci.org/repodono/repodono.workspace.svg?branch=master
+  :target: https://travis-ci.org/repodono/repodono.workspace
+.. image:: https://coveralls.io/repos/repodono/repodono.workspace/badge.svg?branch=master&service=github
+  :target: https://coveralls.io/github/repodono/repodono.workspace?branch=master
+
 Features
 --------
 
