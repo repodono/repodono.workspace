@@ -2,7 +2,8 @@
 from plone.testing import layered
 import doctest
 import unittest
-from repodono.workspace.testing import REPODONO_WORKSPACE_FUNCTIONAL_TESTING
+from repodono.workspace.testing import \
+    REPODONO_WORKSPACE_DUMMY_STORAGE_FUNCTIONAL_TESTING
 
 
 tests = (
@@ -13,6 +14,6 @@ tests = (
 def test_suite():
     return unittest.TestSuite(
         [layered(doctest.DocFileSuite(f, optionflags=doctest.ELLIPSIS),
-                 layer=REPODONO_WORKSPACE_FUNCTIONAL_TESTING)
+                 layer=REPODONO_WORKSPACE_DUMMY_STORAGE_FUNCTIONAL_TESTING)
             for f in tests]
     )

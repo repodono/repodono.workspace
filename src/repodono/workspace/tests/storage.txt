@@ -19,4 +19,4 @@ Check the backend options::
 
     >>> backends = browser.getControl('Backend')
     >>> backends.options
-    []
+    ['dummy_backend']

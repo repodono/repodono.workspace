@@ -9,6 +9,8 @@ from plone.testing import z2
 
 import repodono.workspace
 
+from repodono.storage.testing.layers import REPODONO_DUMMY_STORAGE_FIXTURE
+
 
 class RepodonoWorkspaceLayer(PloneSandboxLayer):
 
@@ -43,4 +45,10 @@ REPODONO_WORKSPACE_ACCEPTANCE_TESTING = FunctionalTesting(
         z2.ZSERVER_FIXTURE
     ),
     name='RepodonoWorkspaceLayer:AcceptanceTesting'
+)
+
+
+REPODONO_WORKSPACE_DUMMY_STORAGE_FUNCTIONAL_TESTING = FunctionalTesting(
+    bases=(REPODONO_WORKSPACE_FIXTURE, REPODONO_DUMMY_STORAGE_FIXTURE),
+    name='RepodonoWorkspaceLayer:FunctionalTesting'
 )
