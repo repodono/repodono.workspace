@@ -17,11 +17,12 @@
       directory="static"
       />
 
-  <browser:page
-      name="workspace_view"
+  <browser:menuItem
       for="repodono.workspace.interfaces.IWorkspace"
-      class="repodono.workspace.browser.view.WorkspaceView"
-      permission="zope2.View"
+      menu="plone_displayviews"
+      title="Workspace View"
+      action="storage_contents"
+      description="View the contents within a workspace"
       />
 
 </configure>
